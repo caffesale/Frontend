@@ -192,3 +192,27 @@ function Greeting(name){
 }
 ```
 
+## 실습과제 
+
+```
+let b = 1;
+
+function hi () {
+  const a = 1;
+
+  let b = 100;
+
+  b++;
+
+  console.log(a,b);
+}
+
+//console.log(a); 전역 스코프에서 함수 스코프를 참조할 수 없으므로(LexicalEnvironment의 outerEnvironmentReference는 단일방향 리스트로 구성되어 있음) ReferenceError가 표시된다 오류가 나지 않게 하려면 변수 b처럼 전역 변수를 따로 선언해주어야 한다.
+
+console.log(b); // 전역 스코프를 참조해 1을 표시한다. 
+
+hi(); // 함수 내부에 변수 b가 선언되어 있으므로 내부 스코프를 참조한다. a=1, b = 100으로 초기화되고 이후 b만 1이 증가하여 101로 표기된다. console.log(a,b)이므로 전체 표기는 1 101이다.
+
+console.log(b); // 전역 스코프를 참조해 1을 표시한다. 
+
+```
