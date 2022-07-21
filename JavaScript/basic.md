@@ -45,8 +45,8 @@ undefined는 선언되었지만 따로 값이 부여되지 않은 상태에서 �
 
 깊은 복사는 원시 데이터 타입에서 일어난다. 변수 공간에 저장된 값을 그대로 복사해 전달하기 때문에 전달받은 변수에 다른 값이 재할당되더라도 원본 변수의 값에 영향을 주지 않는다. 
 
-예를 들어
-```
+
+```javascript
 let num =10;
 let copyNum = num;
 copyNum = 20;
@@ -54,12 +54,10 @@ copyNum = 20;
 console.log(num); // 10
 console.log(copyNum); // 20
 ```
-이다.
 
 얕은 복사는 객체와 같은 참조형 데이터에서 일어난다. 객체가 할당된 변수는 변수공간에 값이 아니라 데이터가 위치하고 있는 메모리의 주소를 저장하고 있기 때문에 객체에 값을 재할당하면 원본과 복사본 모두의 값에 영향을 준다.
 
-예를 들어 
-```
+```javascript
 const person = {
   name : "Yi Sun-sin"
 }
@@ -69,7 +67,6 @@ person.name = "Kim";
 console.log(person.name); // Kim
 console.log(copyPerson.name); // Kim
 ```
-이다.
 
 ### 불변 객체를 만드는 방법
 
@@ -78,21 +75,20 @@ const 키워드 와 Object.freeze()를 통해 불변 객체를 만들 수 있다
     const 키워드는 변수에 객체를 새로 할당할 수는 없으나 객체의 속성은 변경 가능하다.
   
   
-예를 들어 
-```
+```javascript
 let person = {};
 
 person.name = "Kim";
 
 console.log(person); // Kim
 ```
-이다. 반면,
+
+반면,
 
     Object.freeze()는 변수에 객체를 새로 할당할 수 있지만 객체의 속성은 변경 불가능하다.
 
 
-예를 들어
-```
+```javascript
 let person = {
   name : "Yi Sun-sin"
 };
@@ -108,7 +104,6 @@ person = { name : "Kim" }; // 은 가능하다
 
 console.log(person); // "Kim"
 ```
-이다.
 
 따라서 const키워드와 Object.freeze()를 조합하면 변수에 재할당 할 수도, 객체의 속성을 변경할 수도 없는 객체가 만들어진다.
 <br>
@@ -163,7 +158,7 @@ LexicalEnvironment는 실질적으로 식별자를 확인하기 위한 공간이
 
 > 클로저(closure)는 외부 실행 컨텍스트가 종료된 이후에도 외부 변수를 기억하고 이 외부 변수에 접근할 수 있는 함수를 의미한다. 
 
-```
+```javascript
 function increaseNum(){
   let num = 0;
 	
@@ -182,7 +177,7 @@ alert(count()); // 0
 
 함수 내에 직접적으로 은닉해야하는 속성값, 변수가 있다면 이 클로저를 활용해 접근을 차단할 수 있다. 함수 내부에 this 키워드와 프로퍼티를 사용해 만드는 대신
 
-```
+```javascript
 //함수 내부에 this 키워드와 프로퍼티를 사용해 만드는 대신 변수와 메서드를 만들dj 메서드를 리턴하는 식으로
 function Greeting(name){
   let _name  = name;
@@ -194,7 +189,7 @@ function Greeting(name){
 <br>
 ## 실습과제 
 <br>
-```
+```javascript
 let b = 1;
 
 function hi () {
