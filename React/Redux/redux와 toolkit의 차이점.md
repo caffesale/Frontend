@@ -285,8 +285,8 @@ const todosSlice = createSlice({
 + createAsyncThunk는 문자열과 콜백함수를 인자로 받는다. 문자열은 actionType을 생성하는데 사용하고 콜백함수는 비동기처리를 한다.
 + createSlice는 extraReducers를 통해 다른 액션 타입을 하나의 리듀서에 추가할 수 있다.
 
-> 즉, 비동기처리를 위한 thunk function으로 dispatch -> 다시 thunk function 내부에서 reducer로 dispatch에서
-> createAsyncThunk로 비동기처리 -> pending, fulfilled, rejected에 따라 extraReducers를 덧붙여 처리로 흐름이 간략화되었다.
+ 즉, 비동기처리를 위한 thunk function으로 dispatch -> 다시 thunk function 내부에서 reducer로 dispatch에서
+ createAsyncThunk로 비동기처리 -> pending, fulfilled, rejected에 따라 extraReducers를 덧붙여 처리로 흐름이 간략화되었다.
 
 
 
