@@ -90,8 +90,8 @@ configureStore는
 > 1. action type명명
 > 2. action creater 작성
 > 3. slice reducer 작성
-> 4. middleware가 추가된다면 또 그에 맞는 action type, action creater작성
-> 5. middleware작성
+> 4. middleware작성
+
 
 ```javascript
 
