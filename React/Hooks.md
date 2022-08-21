@@ -8,4 +8,18 @@
 
 이는 react와 다른 라이브러리를 병용하는 프로젝트에서 state로 관리하기 까다로운 값을 가볍게 다룰 수 있게 도와준다. 클래스 구현체와 비슷하게 단순히 값을 담는 상자같은 용도로도 활용할 수 있는 것이다
 
+# useState로 한번에 여러 input 값을 받아오기
 
+```javascript
+// input 값을 받아올 때 useState를 여러번 이용하는 수고를 줄이려면 두 가지 방법이 있다.
+const [value, setValue] = useState({
+    id: "",
+    password: "",
+});
+
+const onChangeHandler = (e) => {
+    setValue((prev) => ({...prev, [e.target.name]:e.target.value}))
+}
+
+// 이 때 모든 input태그의 onChange 함수에는 같은 onChangeHandler를 적용해준다.
+```
