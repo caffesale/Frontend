@@ -11,7 +11,7 @@
 # useState로 한번에 여러 input 값을 받아오기
 
 ```javascript
-// input 값을 받아올 때 useState를 여러번 이용하는 수고를 줄이려면 두 가지 방법이 있다.
+// input 값을 받아올 때 useState를 여러번 이용하는 수고를 줄이는 방법이 있다.
 const [value, setValue] = useState({
     id: "",
     password: "",
