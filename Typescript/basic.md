@@ -11,4 +11,6 @@ Typescript는 javascript에서 형 변환이 추가된 언어이다. 정적(stat
 
 ## interface
 
-class를 다룰때 class 내부값의 type들을 미리 정의
+class를 다룰때 class 내부값의 type들을 미리 정의할 수 있다. 이렇게 interface를 지정해두면 
+
+## type
